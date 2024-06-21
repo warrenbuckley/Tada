@@ -8,9 +8,11 @@
     "watch": "vite build --watch"
   },
   "dependencies": {
+    "canvas-confetti": "^1.9.3",
     "lit": "^3.1.4"
   },
   "devDependencies": {
+    "@types/canvas-confetti": "^1.6.4",
     "@umbraco-cms/backoffice": "^14.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
