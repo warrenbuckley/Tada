@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tada.Website", "Tada.Website\Tada.Website.csproj", "{1C3AEB47-10A1-408E-AFE1-741FB40C2953}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tada", "Tada\Tada.csproj", "{6FE26B0E-E195-4C88-A729-55BC05EF0EC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C3AEB47-10A1-408E-AFE1-741FB40C2953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C3AEB47-10A1-408E-AFE1-741FB40C2953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C3AEB47-10A1-408E-AFE1-741FB40C2953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C3AEB47-10A1-408E-AFE1-741FB40C2953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE26B0E-E195-4C88-A729-55BC05EF0EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE26B0E-E195-4C88-A729-55BC05EF0EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE26B0E-E195-4C88-A729-55BC05EF0EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE26B0E-E195-4C88-A729-55BC05EF0EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

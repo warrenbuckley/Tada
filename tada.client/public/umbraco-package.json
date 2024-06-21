@@ -1,0 +1,15 @@
+{
+    "$schema": "../../Tada.Website/umbraco-package-schema.json",
+    "id": "tada",
+    "name": "Tada",
+    "allowPackageTelemetry": true,
+    "version": "1.0.0",
+    "extensions": [
+        {
+          "name": "Tada EntryPoint",
+          "alias": "tada.entrypoint",
+          "type": "backofficeEntryPoint",
+          "js": "/app_plugins/Tada/tada.js"
+        }
+      ]
+}
