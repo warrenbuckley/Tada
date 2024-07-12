@@ -1,0 +1,16 @@
+{
+    "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+    "Title": "Tada",
+    "Tags": [ "Demo", "Confetti"],
+    "AuthorDetails": {
+        "Name": "Warren Buckley",
+        "Url": "https://hackmakedo.com",
+        "Description": "Warren is a freelance Umbraco developer who loves to tinker and hack and is available for hire. He has been working with Umbraco since the days of the yahoo mailing list (aka way too long).",
+        "ImageUrl": "https://hackmakedo.com/images/warren_square.jpg",
+        "SyncContributorsFromRepository": true
+    },
+    "PackageType": "Package",
+    "Category": "Editor Tools",
+    "LicenseTypes": ["Free"],
+    "VideoUrl": "https://youtu.be/Y6pHPU8NxpU"
+}
