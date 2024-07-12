@@ -13,7 +13,7 @@ export const manifests: Array<ManifestWorkspaceActions> = [
         meta: {
             look: 'primary',
             color: 'positive',
-            label: 'TADA Save & Publish'
+            label: 'Save & Publish'
         },
         conditions: [
             {
