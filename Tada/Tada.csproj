@@ -7,12 +7,33 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Tada</PackageId>
+    <PackageId>Umbraco.Community.Tada</PackageId>
     <Product>Tada</Product>
-    <Title>Tada</Title>
-    <Description>...</Description>
+    <Title>Umbraco Tada 🎉🥳</Title>
+    <Description>A simple Umbraco V14 package that plays a drumroll and fires confetti everytime you save and publish.
+This is demo code designed to support a blog post</Description>
     <PackageTags>umbraco plugin package</PackageTags>
+    <Copyright>Warren Buckley</Copyright>
+    <PackageProjectUrl>https://github.com/warrenbuckley/Tada</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/warrenbuckley/Tada</RepositoryUrl>
+    <Company>Hack Make Do</Company>
+    <Authors>warrenbuckley</Authors>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageIcon>umbraco.community.tada.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\umbraco.community.tada.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 
   <ItemGroup>
