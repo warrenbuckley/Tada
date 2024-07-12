@@ -2,7 +2,7 @@
 $projectFile = "./Tada/Tada.csproj"
 $configuration = "Release"
 $outputDirectory = "./build.out"
-$version = "1.0.0"
+$version = "1.0.1"
 $packageJsonPath = "./Tada/wwwroot/umbraco-package.json"
 
 # Delete all files in the output directory
