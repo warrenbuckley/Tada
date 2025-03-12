@@ -1,7 +1,6 @@
 import { UMB_ENTITY_IS_NOT_TRASHED_CONDITION_ALIAS } from '@umbraco-cms/backoffice/recycle-bin';
-import type { ManifestWorkspaceActions } from '@umbraco-cms/backoffice/extension-registry';
 
-export const manifests: Array<ManifestWorkspaceActions> = [
+export const manifests: Array<UmbExtensionManifest> = [
 	{
 		type: 'workspaceAction',
         kind: 'default',
