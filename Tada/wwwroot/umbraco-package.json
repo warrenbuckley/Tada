@@ -1,15 +1,15 @@
 {
-    "$schema": "../../Tada.Website/umbraco-package-schema.json",
-    "id": "tada",
-    "name": "Tada",
-    "allowTelemetry": true,
-    "version": "1.0.1",
-    "extensions": [
-        {
-          "name": "Tada EntryPoint",
-          "alias": "tada.entrypoint",
-          "type": "backofficeEntryPoint",
-          "js": "/App_Plugins/Tada/tada.js"
-        }
-      ]
+  "$schema": "../../Tada.Website/umbraco-package-schema.json",
+  "id": "tada",
+  "name": "Tada",
+  "allowTelemetry": true,
+  "version": "1.0.2",
+  "extensions": [
+    {
+      "name": "Tada EntryPoint",
+      "alias": "tada.entrypoint",
+      "type": "backofficeEntryPoint",
+      "js": "/App_Plugins/Tada/tada.js"
+    }
+  ]
 }

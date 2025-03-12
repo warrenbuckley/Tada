@@ -3,7 +3,7 @@
     "id": "tada",
     "name": "Tada",
     "allowTelemetry": true,
-    "version": "1.0.1",
+    "version": "1.0.2",
     "extensions": [
         {
           "name": "Tada EntryPoint",
