@@ -7,12 +7,12 @@ const e = [
     // Alias of thing you wanna overwrite
     alias: "Tada.WorkspaceAction.Document.SaveAndPublish",
     name: "[Tada] Save And Publish Document Workspace Action",
-    api: () => import("./tada.save-and-publish.action-CtijsPZL.js"),
+    api: () => import("./tada.save-and-publish.action-CaQMfjev.js"),
     weight: 70,
     meta: {
       look: "primary",
       color: "positive",
-      label: "TADA Save & Publish"
+      label: "Save & Publish"
     },
     conditions: [
       {
