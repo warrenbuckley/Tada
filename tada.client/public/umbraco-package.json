@@ -9,7 +9,7 @@
           "name": "Tada EntryPoint",
           "alias": "tada.entrypoint",
           "type": "backofficeEntryPoint",
-          "js": "/app_plugins/Tada/tada.js"
+          "js": "/App_Plugins/Tada/tada.js"
         }
       ]
 }
