@@ -2,7 +2,7 @@
     "$schema": "../../Tada.Website/umbraco-package-schema.json",
     "id": "tada",
     "name": "Tada",
-    "allowPackageTelemetry": true,
+    "allowTelemetry": true,
     "version": "1.0.0",
     "extensions": [
         {
