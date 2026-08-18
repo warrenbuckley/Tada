@@ -1,9 +1,9 @@
-import { UMB_DOCUMENT_WORKSPACE_CONTEXT as ge } from "@umbraco-cms/backoffice/document";
+import { UMB_DOCUMENT_PUBLISHING_WORKSPACE_CONTEXT as pe } from "@umbraco-cms/backoffice/document";
 import { UmbWorkspaceActionBase as Me } from "@umbraco-cms/backoffice/workspace";
-var B = {};
-(function I(m, M, P, C) {
-  var E = !!(m.Worker && m.Blob && m.Promise && m.OffscreenCanvas && m.OffscreenCanvasRenderingContext2D && m.HTMLCanvasElement && m.HTMLCanvasElement.prototype.transferControlToOffscreen && m.URL && m.URL.createObjectURL), N = typeof Path2D == "function" && typeof DOMMatrix == "function", _ = function() {
-    if (!m.OffscreenCanvas)
+var A = {};
+(function E(v, M, I, C) {
+  var x = !!(v.Worker && v.Blob && v.Promise && v.OffscreenCanvas && v.OffscreenCanvasRenderingContext2D && v.HTMLCanvasElement && v.HTMLCanvasElement.prototype.transferControlToOffscreen && v.URL && v.URL.createObjectURL), N = typeof Path2D == "function" && typeof DOMMatrix == "function", V = function() {
+    if (!v.OffscreenCanvas)
       return !1;
     var r = new OffscreenCanvas(1, 1), e = r.getContext("2d");
     e.fillRect(0, 0, 1, 1);
@@ -18,7 +18,7 @@ var B = {};
   function L() {
   }
   function F(r) {
-    var e = M.exports.Promise, a = e !== void 0 ? e : m.Promise;
+    var e = M.exports.Promise, a = e !== void 0 ? e : v.Promise;
     return typeof a == "function" ? new a(r) : (r(L, L), null);
   }
   var R = /* @__PURE__ */ function(r, e) {
@@ -35,7 +35,7 @@ var B = {};
         e.clear();
       }
     };
-  }(_, /* @__PURE__ */ new Map()), O = function() {
+  }(V, /* @__PURE__ */ new Map()), S = function() {
     var r = Math.floor(16.666666666666668), e, a, t = {}, o = 0;
     return typeof requestAnimationFrame == "function" && typeof cancelAnimationFrame == "function" ? (e = function(i) {
       var l = Math.random();
@@ -63,8 +63,8 @@ var B = {};
           return i(n, null), e;
         var d = Math.random().toString(36).slice(2);
         return e = F(function(h) {
-          function f(p) {
-            p.data.callback === d && (delete a[d], o.removeEventListener("message", f), e = null, R.clear(), u(), h());
+          function f(g) {
+            g.data.callback === d && (delete a[d], o.removeEventListener("message", f), e = null, R.clear(), u(), h());
           }
           o.addEventListener("message", f), i(n, d), a[d] = f.bind(null, { data: { callback: d } });
         }), e;
@@ -77,10 +77,10 @@ var B = {};
     return function() {
       if (r)
         return r;
-      if (!P && E) {
+      if (!I && x) {
         var o = [
           "var CONFETTI, SIZE = {}, module = {};",
-          "(" + I.toString() + ")(this, module, true, SIZE);",
+          "(" + E.toString() + ")(this, module, true, SIZE);",
           "onmessage = function(msg) {",
           "  if (msg.data.options) {",
           "    CONFETTI(msg.data.options).then(function () {",
@@ -139,22 +139,22 @@ var B = {};
   function H(r, e) {
     return e ? e(r) : r;
   }
-  function K(r) {
+  function G(r) {
     return r != null;
   }
-  function v(r, e, a) {
+  function m(r, e, a) {
     return H(
-      r && K(r[e]) ? r[e] : q[e],
+      r && G(r[e]) ? r[e] : q[e],
       a
     );
   }
-  function G(r) {
+  function K(r) {
     return r < 0 ? 0 : Math.floor(r);
   }
   function J(r, e) {
     return Math.floor(Math.random() * (e - r)) + r;
   }
-  function S(r) {
+  function O(r) {
     return parseInt(r, 16);
   }
   function Q(r) {
@@ -163,14 +163,14 @@ var B = {};
   function X(r) {
     var e = String(r).replace(/[^0-9a-f]/gi, "");
     return e.length < 6 && (e = e[0] + e[0] + e[1] + e[1] + e[2] + e[2]), {
-      r: S(e.substring(0, 2)),
-      g: S(e.substring(2, 4)),
-      b: S(e.substring(4, 6))
+      r: O(e.substring(0, 2)),
+      g: O(e.substring(2, 4)),
+      b: O(e.substring(4, 6))
     };
   }
   function $(r) {
-    var e = v(r, "origin", Object);
-    return e.x = v(e, "x", Number), e.y = v(e, "y", Number), e;
+    var e = m(r, "origin", Object);
+    return e.x = m(e, "x", Number), e.y = m(e, "y", Number), e;
   }
   function Y(r) {
     r.width = document.documentElement.clientWidth, r.height = document.documentElement.clientHeight;
@@ -236,8 +236,8 @@ var B = {};
         e.y
       ]);
       f.multiplySelf(new DOMMatrix(e.shape.matrix));
-      var p = r.createPattern(R.transform(e.shape.bitmap), "no-repeat");
-      p.setTransform(f), r.globalAlpha = 1 - a, r.fillStyle = p, r.fillRect(
+      var g = r.createPattern(R.transform(e.shape.bitmap), "no-repeat");
+      g.setTransform(f), r.globalAlpha = 1 - a, r.fillStyle = g, r.fillRect(
         e.x - d / 2,
         e.y - h / 2,
         d,
@@ -246,8 +246,8 @@ var B = {};
     } else if (e.shape === "circle")
       r.ellipse ? r.ellipse(e.x, e.y, Math.abs(i - t) * e.ovalScalar, Math.abs(l - o) * e.ovalScalar, Math.PI / 10 * e.wobble, 0, 2 * Math.PI) : ae(r, e.x, e.y, Math.abs(i - t) * e.ovalScalar, Math.abs(l - o) * e.ovalScalar, Math.PI / 10 * e.wobble, 0, 2 * Math.PI);
     else if (e.shape === "star")
-      for (var c = Math.PI / 2 * 3, g = 4 * e.scalar, y = 8 * e.scalar, b = e.x, T = e.y, x = 5, w = Math.PI / x; x--; )
-        b = e.x + Math.cos(c) * y, T = e.y + Math.sin(c) * y, r.lineTo(b, T), c += w, b = e.x + Math.cos(c) * g, T = e.y + Math.sin(c) * g, r.lineTo(b, T), c += w;
+      for (var c = Math.PI / 2 * 3, p = 4 * e.scalar, y = 8 * e.scalar, b = e.x, T = e.y, P = 5, w = Math.PI / P; P--; )
+        b = e.x + Math.cos(c) * y, T = e.y + Math.sin(c) * y, r.lineTo(b, T), c += w, b = e.x + Math.cos(c) * p, T = e.y + Math.sin(c) * p, r.lineTo(b, T), c += w;
     else
       r.moveTo(Math.floor(e.x), Math.floor(e.y)), r.lineTo(Math.floor(e.wobbleX), Math.floor(o)), r.lineTo(Math.floor(i), Math.floor(l)), r.lineTo(Math.floor(t), Math.floor(e.wobbleY));
     return r.closePath(), r.fill(), e.tick < e.totalTicks;
@@ -258,11 +258,11 @@ var B = {};
         n = s = null, l.clearRect(0, 0, t.width, t.height), R.clear(), o(), d();
       }
       function f() {
-        P && !(t.width === C.width && t.height === C.height) && (t.width = r.width = C.width, t.height = r.height = C.height), !t.width && !t.height && (a(r), t.width = r.width, t.height = r.height), l.clearRect(0, 0, t.width, t.height), i = i.filter(function(p) {
-          return te(l, p);
-        }), i.length ? n = O.frame(f) : h();
+        I && !(t.width === C.width && t.height === C.height) && (t.width = r.width = C.width, t.height = r.height = C.height), !t.width && !t.height && (a(r), t.width = r.width, t.height = r.height), l.clearRect(0, 0, t.width, t.height), i = i.filter(function(g) {
+          return te(l, g);
+        }), i.length ? n = S.frame(f) : h();
       }
-      n = O.frame(f), s = h;
+      n = S.frame(f), s = h;
     });
     return {
       addFettis: function(d) {
@@ -271,22 +271,22 @@ var B = {};
       canvas: r,
       promise: u,
       reset: function() {
-        n && O.cancel(n), s && s();
+        n && S.cancel(n), s && s();
       }
     };
   }
-  function W(r, e) {
-    var a = !r, t = !!v(e || {}, "resize"), o = !1, i = v(e, "disableForReducedMotion", Boolean), l = E && !!v(e || {}, "useWorker"), n = l ? Z() : null, s = a ? Y : ee, u = r && n ? !!r.__confetti_initialized : !1, d = typeof matchMedia == "function" && matchMedia("(prefers-reduced-motion)").matches, h;
-    function f(c, g, y) {
-      for (var b = v(c, "particleCount", G), T = v(c, "angle", Number), x = v(c, "spread", Number), w = v(c, "startVelocity", Number), ce = v(c, "decay", Number), ue = v(c, "gravity", Number), he = v(c, "drift", Number), D = v(c, "colors", Q), de = v(c, "ticks", Number), j = v(c, "shapes"), fe = v(c, "scalar"), ve = !!v(c, "flat"), z = $(c), V = b, A = [], me = r.width * z.x, pe = r.height * z.y; V--; )
-        A.push(
+  function U(r, e) {
+    var a = !r, t = !!m(e || {}, "resize"), o = !1, i = m(e, "disableForReducedMotion", Boolean), l = x && !!m(e || {}, "useWorker"), n = l ? Z() : null, s = a ? Y : ee, u = r && n ? !!r.__confetti_initialized : !1, d = typeof matchMedia == "function" && matchMedia("(prefers-reduced-motion)").matches, h;
+    function f(c, p, y) {
+      for (var b = m(c, "particleCount", K), T = m(c, "angle", Number), P = m(c, "spread", Number), w = m(c, "startVelocity", Number), ce = m(c, "decay", Number), ue = m(c, "gravity", Number), he = m(c, "drift", Number), D = m(c, "colors", Q), de = m(c, "ticks", Number), j = m(c, "shapes"), fe = m(c, "scalar"), ve = !!m(c, "flat"), _ = $(c), z = b, k = [], me = r.width * _.x, ge = r.height * _.y; z--; )
+        k.push(
           ne({
             x: me,
-            y: pe,
+            y: ge,
             angle: T,
-            spread: x,
+            spread: P,
             startVelocity: w,
-            color: D[V % D.length],
+            color: D[z % D.length],
             shape: j[J(0, j.length)],
             ticks: de,
             decay: ce,
@@ -296,11 +296,11 @@ var B = {};
             flat: ve
           })
         );
-      return h ? h.addFettis(A) : (h = oe(r, A, s, g, y), h.promise);
+      return h ? h.addFettis(k) : (h = oe(r, k, s, p, y), h.promise);
     }
-    function p(c) {
-      var g = i || v(c, "disableForReducedMotion", Boolean), y = v(c, "zIndex", Number);
-      if (g && d)
+    function g(c) {
+      var p = i || m(c, "disableForReducedMotion", Boolean), y = m(c, "zIndex", Number);
+      if (p && d)
         return F(function(w) {
           w();
         });
@@ -328,18 +328,18 @@ var B = {};
         }
         b.width = b.height = null;
       }
-      function x() {
-        h = null, t && (o = !1, m.removeEventListener("resize", T)), a && r && (document.body.contains(r) && document.body.removeChild(r), r = null, u = !1);
+      function P() {
+        h = null, t && (o = !1, v.removeEventListener("resize", T)), a && r && (document.body.contains(r) && document.body.removeChild(r), r = null, u = !1);
       }
-      return t && !o && (o = !0, m.addEventListener("resize", T, !1)), n ? n.fire(c, b, x) : f(c, b, x);
+      return t && !o && (o = !0, v.addEventListener("resize", T, !1)), n ? n.fire(c, b, P) : f(c, b, P);
     }
-    return p.reset = function() {
+    return g.reset = function() {
       n && n.reset(), h && h.reset();
-    }, p;
+    }, g;
   }
-  var k;
-  function U() {
-    return k || (k = W(null, { useWorker: !0, resize: !0 })), k;
+  var B;
+  function W() {
+    return B || (B = U(null, { useWorker: !0, resize: !0 })), B;
   }
   function ie(r, e, a, t, o, i, l) {
     var n = new Path2D(r), s = new Path2D();
@@ -361,11 +361,11 @@ var B = {};
     typeof r == "string" ? e = r : (e = r.path, a = r.matrix);
     var t = new Path2D(e), o = document.createElement("canvas"), i = o.getContext("2d");
     if (!a) {
-      for (var l = 1e3, n = l, s = l, u = 0, d = 0, h, f, p = 0; p < l; p += 2)
+      for (var l = 1e3, n = l, s = l, u = 0, d = 0, h, f, g = 0; g < l; g += 2)
         for (var c = 0; c < l; c += 2)
-          i.isPointInPath(t, p, c, "nonzero") && (n = Math.min(n, p), s = Math.min(s, c), u = Math.max(u, p), d = Math.max(d, c));
+          i.isPointInPath(t, g, c, "nonzero") && (n = Math.min(n, g), s = Math.min(s, c), u = Math.max(u, g), d = Math.max(d, c));
       h = u - n, f = d - s;
-      var g = 10, y = Math.min(g / h, g / f);
+      var p = 10, y = Math.min(p / h, p / f);
       a = [
         y,
         0,
@@ -386,35 +386,35 @@ var B = {};
     typeof r == "string" ? e = r : (e = r.text, a = "scalar" in r ? r.scalar : a, o = "fontFamily" in r ? r.fontFamily : o, t = "color" in r ? r.color : t);
     var i = 10 * a, l = "" + i + "px " + o, n = new OffscreenCanvas(i, i), s = n.getContext("2d");
     s.font = l;
-    var u = s.measureText(e), d = Math.ceil(u.actualBoundingBoxRight + u.actualBoundingBoxLeft), h = Math.ceil(u.actualBoundingBoxAscent + u.actualBoundingBoxDescent), f = 2, p = u.actualBoundingBoxLeft + f, c = u.actualBoundingBoxAscent + f;
-    d += f + f, h += f + f, n = new OffscreenCanvas(d, h), s = n.getContext("2d"), s.font = l, s.fillStyle = t, s.fillText(e, p, c);
-    var g = 1 / a;
+    var u = s.measureText(e), d = Math.ceil(u.actualBoundingBoxRight + u.actualBoundingBoxLeft), h = Math.ceil(u.actualBoundingBoxAscent + u.actualBoundingBoxDescent), f = 2, g = u.actualBoundingBoxLeft + f, c = u.actualBoundingBoxAscent + f;
+    d += f + f, h += f + f, n = new OffscreenCanvas(d, h), s = n.getContext("2d"), s.font = l, s.fillStyle = t, s.fillText(e, g, c);
+    var p = 1 / a;
     return {
       type: "bitmap",
       // TODO these probably need to be transfered for workers
       bitmap: n.transferToImageBitmap(),
-      matrix: [g, 0, 0, g, -d * g / 2, -h * g / 2]
+      matrix: [p, 0, 0, p, -d * p / 2, -h * p / 2]
     };
   }
   M.exports = function() {
-    return U().apply(this, arguments);
+    return W().apply(this, arguments);
   }, M.exports.reset = function() {
-    U().reset();
-  }, M.exports.create = W, M.exports.shapeFromPath = le, M.exports.shapeFromText = se;
+    W().reset();
+  }, M.exports.create = U, M.exports.shapeFromPath = le, M.exports.shapeFromText = se;
 })(/* @__PURE__ */ function() {
   return typeof window < "u" ? window : typeof self < "u" ? self : this || {};
-}(), B, !1);
-const ye = B.exports;
-B.exports.create;
+}(), A, !1);
+const ye = A.exports;
+A.exports.create;
 function be() {
-  const m = {
+  const v = {
     origin: { y: 0.7 },
     ticks: 5e3
   };
-  function M(C, E) {
+  function M(C, x) {
     ye({
-      ...m,
-      ...E,
+      ...v,
+      ...x,
       particleCount: Math.floor(200 * C)
     });
   }
@@ -429,17 +429,17 @@ function be() {
 class Te extends Me {
   async execute() {
     try {
-      const m = await this.getContext(ge), M = new Audio("https://hackmakedo.com/audio/drumroll.mp3");
-      let P = !1;
+      const v = await this.getContext(pe), M = new Audio("https://hackmakedo.com/audio/drumroll.mp3");
+      let I = !1;
       M.addEventListener("timeupdate", async () => {
-        console.log("Current time:", M.currentTime), M.currentTime >= 1.5 && !P && (await m.saveAndPublish(), be(), P = !0);
+        console.log("Current time:", M.currentTime), M.currentTime >= 1.5 && !I && (await (v == null ? void 0 : v.saveAndPublish()), be(), I = !0);
       }), M.play();
-    } catch (m) {
-      console.error("Failed to save and publish document", m);
+    } catch (v) {
+      console.error("Failed to save and publish document", v);
     }
   }
 }
 export {
   Te as default
 };
-//# sourceMappingURL=tada.save-and-publish.action-CaQMfjev.js.map
+//# sourceMappingURL=tada.save-and-publish.action-BcBJ3qSc.js.map

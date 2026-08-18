@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@types/canvas-confetti": "^1.9.0",
-    "@umbraco-cms/backoffice": "^15.3.0-rc2",
+    "@umbraco-cms/backoffice": "^17.6.2",
     "typescript": "^5.8.2",
     "vite": "^6.2.5"
   }
