@@ -1,4 +1,4 @@
-import { UMB_DOCUMENT_WORKSPACE_CONTEXT } from '@umbraco-cms/backoffice/document';
+import { UMB_DOCUMENT_PUBLISHING_WORKSPACE_CONTEXT } from '@umbraco-cms/backoffice/document';
 import { UmbWorkspaceActionBase } from '@umbraco-cms/backoffice/workspace';
 import { launchConfetti } from '../Confetti';
 
@@ -6,8 +6,8 @@ export default class TadaDocumentSaveAndPublishWorkspaceAction extends UmbWorksp
 
     async execute() {
         try {
-             // Get the workspace context
-            const workspaceContext = await this.getContext(UMB_DOCUMENT_WORKSPACE_CONTEXT);
+             // Get the publishing workspace context (saveAndPublish lives here, not on the document workspace context)
+            const workspaceContext = await this.getContext(UMB_DOCUMENT_PUBLISHING_WORKSPACE_CONTEXT);
 
             // Load in drumroll
             const audio = new Audio('https://hackmakedo.com/audio/drumroll.mp3');
@@ -21,7 +21,7 @@ export default class TadaDocumentSaveAndPublishWorkspaceAction extends UmbWorksp
                 // Check if the current time is at least 5 seconds and the specific code hasn't run yet
                 if (audio.currentTime >= 1.5 && !codeExecuted) {
                      // Save and publish the document
-		            await workspaceContext.saveAndPublish();
+		            await workspaceContext?.saveAndPublish();
 
                     // Confetti time
                     launchConfetti();
